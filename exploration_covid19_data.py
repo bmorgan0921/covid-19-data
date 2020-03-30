@@ -13,8 +13,10 @@ for state in states:
     state_dict[state]['acceleration_cases'] = state_dict[state]['velocity_cases'].diff()
 
 
-for state in states:
-    plt.plot(state_dict[state]['acceleration_cases'][datetime(2020, 3, 1):], label = state)
-plt.xticks(rotation = 45)
-plt.legend()
-plt.show()
+print(state_dict['Illinois'])
+
+# for state in states:
+#     plt.plot(state_dict[state]['acceleration_cases'][datetime(2020, 3, 1):], label = state)
+# plt.xticks(rotation = 45)
+# plt.legend()
+# plt.show()
