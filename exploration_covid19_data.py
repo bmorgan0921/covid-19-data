@@ -49,3 +49,4 @@ analysis_df['deaths_percentage_of_state_cases'] = analysis_df['deaths'] / analys
 analysis_df['state_deaths_percentage_of_total_deaths'] = analysis_df['deaths'] / analysis_df['deaths'].sum()
 print('Total cases: {} -- Total deaths: {} -- Death %: {}%'.format(analysis_df['cases'].sum(), analysis_df['deaths'].sum(), round(100 * analysis_df['deaths'].sum()/analysis_df['cases'].sum(),2)))
 # print(analysis_df['deaths'].sum()/analysis_df['cases'].sum())
+print(analysis_df)
