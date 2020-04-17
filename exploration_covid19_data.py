@@ -43,8 +43,6 @@ analysis_df = pd.concat([state_analysis_df, state_population_df], axis = 1 )
 
 analysis_df['pct_of_state_population'] = analysis_df['cases'] / analysis_df['population_estimate_2019']
 analysis_df['pct_of_total_population'] = analysis_df['population_estimate_2019'] / analysis_df['population_estimate_2019'].sum()
-# analysis_df['above_average_pct'] = [1.0 if x > analysis_df['pct_of_state_population'].mean() else 0.0 for x in analysis_df['pct_of_state_population'].values]
-# analysis_df['above_average_pop'] = [1.0 if x > analysis_df['population_estimate_2019'].mean() else 0.0 for x in analysis_df['population_estimate_2019'].values]
 analysis_df['deaths_percentage_of_state_cases'] = analysis_df['deaths'] / analysis_df['cases']
 analysis_df['state_deaths_percentage_of_total_deaths'] = analysis_df['deaths'] / analysis_df['deaths'].sum()
 print('Total cases: {} -- Total deaths: {} -- Death %: {}%'.format(analysis_df['cases'].sum(), analysis_df['deaths'].sum(), round(100 * analysis_df['deaths'].sum()/analysis_df['cases'].sum(),2)))
